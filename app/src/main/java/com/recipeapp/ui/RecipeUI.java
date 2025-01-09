@@ -6,15 +6,21 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
+// import com.recipeapp.datahandler.DataHandler;
+
+// public class RecipeUI implements DataHandler {
 public class RecipeUI {
+    // フィールド
     private BufferedReader reader;
     private DataHandler dataHandler;
 
+    // RecipeUIメソッド インスタンス化 同クラスのdataHandler
     public RecipeUI(DataHandler dataHandler) {
-        reader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         this.dataHandler = dataHandler;
     }
-    
+
+    // displayMenuメソッド
     public void displayMenu() {
 
         System.out.println("Current mode: " + dataHandler.getMode());
