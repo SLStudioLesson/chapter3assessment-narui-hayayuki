@@ -6,9 +6,8 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
-// import com.recipeapp.datahandler.DataHandler;
+import com.recipeapp.datahandler.DataHandler;
 
-// public class RecipeUI implements DataHandler {
 public class RecipeUI {
     // フィールド
     private BufferedReader reader;
@@ -56,4 +55,9 @@ public class RecipeUI {
             }
         }
     }
+
+    private void displayRecipes() {
+        
+    }
+
 }

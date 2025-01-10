@@ -18,22 +18,17 @@ public class App {
 
             // if文で1,2,その他の出力を記載
             // 1,その他でCSVDataHandlerのインスタンス化
-            if ("1".equals(choice)) {
-                CSVDataHandler csvDataHandler = new CSVDataHandler();
-                System.out.println("Current mode: CSV");
-                // 2でJSONDataHandlerのインスタンス化
-            } else if ("2".equals(choice)) {
+            if ("2".equals(choice)) {
                 JSONDataHandler jsonDataHandler = new JSONDataHandler();
-                System.out.println("Current mode: JSON");
-                // 1,その他でCSVDataHandlerのインスタンス化
+                // メインメニューを出力するためにインスタンス化
+                RecipeUI recipeUI = new RecipeUI(jsonDataHandler);
+                recipeUI.displayMenu();
             } else {
                 CSVDataHandler csvDataHandler = new CSVDataHandler();
-                System.out.println("Current mode: CSV");
+                // メインメニューを出力するためにインスタンス化
+                RecipeUI recipeUI = new RecipeUI(csvDataHandler);
+                recipeUI.displayMenu();
             }
-
-            // メインメニューを出力するためにインスタンス化
-            RecipeUI recipeUI = new RecipeUI();
-            recipeUI.displayMenu();
 
         } catch (Exception e) {
             System.err.println("Error: " + e.getMessage());
